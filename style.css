@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: #000;
+}
+
+.bcg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.bcg img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    animation: animation 10s linear infinite;
+}
+
+form {
+    position: relative;
+    border: 2px solid rgba(0, 0, 0, .1);
+    background-color: rgba(0, 0, 0, .6);
+    box-shadow: inset 0 0 2em black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    min-width: 330px;
+    width: 100%;
+    padding: 2em;
+    border-radius: .5em;
+}
+form h1 {
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: white;
+    text-shadow: 0 0 .1em black;
+    margin-bottom: 2rem;
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, .671);
+    padding: .3em .6em;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, .671);
+    outline: none;
+    background-color: rgba(0, 0, 0, .3);
+    resize: none;
+    margin: 1rem 0;
+    border-top-left-radius: .2em;
+    border-top-right-radius: .2em;
+}
+::placeholder {
+    color: rgba(255, 255, 255, .671);
+}
+form button {
+    background-color: rgba(255, 255, 255, .671);
+    color: rgba(0, 0, 0, .8);
+    border: none;
+    border-radius: .2em;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: rgba(255, 255, 255, .9);
+}
+form button:active {
+    transform: translateY(.1em);
+}
+
+
+.bcg img:nth-child(1) {
+    animation-delay: 5s;
+}
+@keyframes animation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/*  NOW WE CAN SEE BOTH IMAGES SWITCHING SMOOTHLY */
